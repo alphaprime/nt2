@@ -20,6 +20,36 @@ namespace nt2
     {
       typedef rectangular_ type;
     };
+
+    template<class Default> struct option<upper_triangular_, tag::shape_, Default>
+    {
+      typedef upper_triangular_ type;
+    };
+
+    template<class Default> struct option<lower_triangular_, tag::shape_, Default>
+    {
+      typedef lower_triangular_ type;
+    };
+
+    template<class Default> struct option<band_diagonal_, tag::shape_, Default>
+    {
+      typedef band_diagonal_ type;
+    };
+
+    template<class Default> struct option<diagonal_, tag::shape_, Default>
+    {
+      typedef diagonal_ type;
+    };
+
+    template<class Default> struct option<positive_definite_, tag::shape_, Default>
+    {
+      typedef positive_definite_ type;
+    };
+
+    template<class Default> struct option<symmetric_, tag::shape_, Default>
+    {
+      typedef symmetric_ type;
+    };
   }
 }
 
