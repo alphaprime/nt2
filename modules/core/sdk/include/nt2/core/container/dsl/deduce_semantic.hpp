@@ -16,27 +16,20 @@
 
 namespace nt2
 {
-  namespace details
-  {
-    template<typename T> struct deduce_semantic;
-
-    template<typename T, typename S, typename Sema>
-    struct deduce_semantic< memory::container<T, S, Sema> >
-    {
-      typedef Sema type;
-    };
-  }
+  namespace tag { struct table_; }
 
   namespace ext
   {
     template<typename Tag, typename Domain, int Arity, typename Expr>
-    struct deduce_semantic;
+    struct deduce_semantic
+    {
+      typedef tag::table_ type;
+    };
 
     template<typename Domain, typename Expr>
     struct deduce_semantic<nt2::tag::terminal_, Domain, 0, Expr>
     {
-      typedef typename boost::proto::result_of::value<Expr>::value_type base;
-      typedef typename details::deduce_semantic<base>::type             type;
+      typedef typename Expr::semantic_type  type;
     };
   }
 
@@ -53,7 +46,15 @@ namespace nt2
                                 , Expr
                                 >
     {};
+
+    template<typename Expr>
+    struct deduce_semantic<Expr&> : deduce_semantic<Expr> {};
+
+    template<typename Expr>
+    struct deduce_semantic<Expr const> : deduce_semantic<Expr> {};
   }
 }
+
+#include <nt2/core/container/dsl/details/semantic/elementwise.hpp>
 
 #endif

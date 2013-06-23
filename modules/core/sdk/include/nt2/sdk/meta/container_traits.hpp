@@ -20,8 +20,28 @@
 #include <cstddef>
 #include <memory>
 
+namespace nt2 { namespace tag { struct table_; } }
+
 namespace nt2 { namespace meta
 {
+  //==============================================================================
+  //==============================================================================
+  template<typename T, typename Enable = void>
+  struct semantic_type_
+  {
+    typedef tag::table_ type;
+  };
+
+
+  template<typename T>
+  struct semantic_type_ < T
+                        , typename  boost::dispatch::meta::
+                          enable_if_type<typename T::semantic_type>::type
+                        >
+  {
+    typedef typename T::semantic_type type;
+  };
+
   //==============================================================================
   //==============================================================================
   template<class T, class Enable=void> struct size_type_
