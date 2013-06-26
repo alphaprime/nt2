@@ -409,7 +409,7 @@ namespace nt2 { namespace memory
     extent_type                 sizes_;
 
     template<typename T2, typename S2, typename Sema2>
-    friend class container;
+    friend struct container;
   };
 
   /*!
