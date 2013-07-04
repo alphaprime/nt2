@@ -25,12 +25,6 @@ namespace nt2
     {
       typedef tag::table_ type;
     };
-
-    template<typename Domain, typename Expr>
-    struct kind_of<nt2::tag::terminal_, Domain, 0, Expr>
-    {
-      typedef typename Expr::kind_type  type;
-    };
   }
 
   namespace meta
