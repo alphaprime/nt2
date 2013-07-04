@@ -20,7 +20,6 @@
 #include <boost/make_shared.hpp>
 
 #include <nt2/core/settings/option.hpp>
-#include <nt2/core/settings/forward/semantic.hpp>
 #include <boost/dispatch/meta/terminal_of_shared.hpp>
 
 namespace nt2 { namespace tag

@@ -29,7 +29,7 @@ namespace nt2 { namespace memory
   struct container_shared_ref
   {
     /// INTERNAL ONLY Precomputed semantic type
-    typedef Sema  semantic_type;
+    typedef Sema                                                 kind_type;
 
     typedef typename boost::remove_const<T>::type                value_type;
     typedef std::size_t                                          size_type;

@@ -25,17 +25,17 @@
 namespace nt2 { namespace ext
 {
   //============================================================================
-  // default deduce_semantic, sort semantic by order of closeness to their
+  // default kind_of, sort semantic by order of closeness to their
   // common parent.
   //============================================================================
   #define M1(z,n,t)                                                            \
   typedef typename boost::proto::result_of::child_c<Expr&,n>::value_type A##n; \
-  typedef typename A##n::semantic_type                                base##n; \
+  typedef typename A##n::kind_type                                    base##n; \
   /**/
 
   #define M0(z,n,t)                                                            \
   template<typename Tag, typename Domain, typename Expr>                       \
-  struct deduce_semantic<Tag, Domain, n, Expr>                                 \
+  struct kind_of<Tag, Domain, n, Expr>                                         \
   {                                                                            \
     BOOST_PP_REPEAT(n, M1, ~)                                                  \
     typedef boost::mpl::vector##n<BOOST_PP_ENUM_PARAMS(n,base)> bases;         \

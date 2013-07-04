@@ -27,19 +27,19 @@ namespace nt2 { namespace meta
   //==============================================================================
   //==============================================================================
   template<typename T, typename Enable = void>
-  struct semantic_type_
+  struct kind_
   {
     typedef tag::table_ type;
   };
 
 
   template<typename T>
-  struct semantic_type_ < T
-                        , typename  boost::dispatch::meta::
-                          enable_if_type<typename T::semantic_type>::type
-                        >
+  struct kind_ < T
+                , typename  boost::dispatch::meta::
+                            enable_if_type<typename T::kind_type>::type
+                >
   {
-    typedef typename T::semantic_type type;
+    typedef typename T::kind_type type;
   };
 
   //==============================================================================
@@ -48,6 +48,7 @@ namespace nt2 { namespace meta
   {
     typedef std::size_t type;
   };
+
   template<class T> struct size_type_<T&> : size_type_<T> {};
 
    //==============================================================================

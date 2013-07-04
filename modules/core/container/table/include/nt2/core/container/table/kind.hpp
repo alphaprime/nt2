@@ -15,7 +15,6 @@
 #include <nt2/core/settings/index.hpp>
 #include <nt2/core/settings/shape.hpp>
 #include <nt2/core/settings/buffer.hpp>
-#include <nt2/core/settings/semantic.hpp>
 #include <nt2/core/settings/alignment.hpp>
 #include <nt2/core/settings/sharing.hpp>
 #include <nt2/core/settings/allocator.hpp>
@@ -35,11 +34,6 @@ namespace nt2 { namespace tag
   **/
   struct table_
   {
-  /*
-    typedef owned_                                          sharing_t;
-    typedef dynamic_                                        storage_duration_t;
-  */
-
     /// INTERNAL ONLY Table usually use whatever the use specify
     template<typename Settings, typename Option>
     struct option
@@ -73,14 +67,8 @@ namespace nt2 { namespace tag
   template<typename Dummy>
   struct table_::default_<nt2::tag::allocator_, Dummy>
   {
-    typedef boost::simd::allocator<void*> type;
+    typedef boost::simd::allocator<void> type;
   };
-
-  /// INTERNAL ONLY table_ is a semantic
-  template<class Dummy>
-  struct semantic_::apply<table_, Dummy>
-                  : boost::mpl::true_
-  {};
 } }
 
 #endif

@@ -96,7 +96,7 @@ namespace nt2 { namespace container
     //==========================================================================
     // Extract Container information from Result
     //==========================================================================
-    typedef typename meta::semantic_type_<Result>::type      semantic_type;
+    typedef typename meta::kind_<Result>::type              kind_type;
     typedef typename meta::value_type_<Result>::type        value_type;
     typedef typename meta::reference_<Result>::type         reference;
     typedef typename meta::const_reference_<Result>::type   const_reference;

@@ -12,7 +12,6 @@
 #include <nt2/core/settings/size.hpp>
 #include <nt2/core/settings/index.hpp>
 #include <nt2/core/settings/option.hpp>
-#include <nt2/core/settings/semantic.hpp>
 #include <nt2/core/settings/interleaving.hpp>
 #include <nt2/core/settings/storage_order.hpp>
 #include <nt2/core/settings/specific_data.hpp>
@@ -53,7 +52,7 @@ namespace nt2 { namespace memory
     public:
 
     /// INTERNAL ONLY Precomputed semantic type
-    typedef Semantic  semantic_type;
+    typedef Semantic                                      kind_type;
 
     /// INTERNAL ONLY storage_scheme option
     typedef typename meta::option < Settings

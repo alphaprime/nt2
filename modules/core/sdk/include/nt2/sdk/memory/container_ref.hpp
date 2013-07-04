@@ -10,7 +10,7 @@
 #define NT2_SDK_MEMORY_CONTAINER_REF_HPP_INCLUDED
 
 #include <nt2/sdk/memory/adapted/container_ref.hpp>
-#include <nt2/core/container/table/semantic.hpp>
+#include <nt2/core/container/table/kind.hpp>
 #include <nt2/core/settings/specific_data.hpp>
 #include <nt2/sdk/memory/forward/container.hpp>
 
@@ -29,7 +29,7 @@ namespace nt2 { namespace memory
   struct container_ref
   {
     /// INTERNAL ONLY Precomputed semantic type
-    typedef Sema  semantic_type;
+    typedef Sema                                                 kind_type;
 
     typedef typename boost::remove_const<T>::type                value_type;
     typedef std::size_t                                          size_type;
