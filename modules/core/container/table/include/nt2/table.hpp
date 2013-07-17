@@ -14,7 +14,6 @@
 //==============================================================================
 #include <nt2/core/container/table/table.hpp>
 #include <nt2/core/utility/share.hpp>
-#include <nt2/core/container/table/kind.hpp>
 #include <nt2/include/functions/of_size.hpp>
 #include <nt2/include/functions/function.hpp>
 #include <nt2/include/functions/display.hpp>

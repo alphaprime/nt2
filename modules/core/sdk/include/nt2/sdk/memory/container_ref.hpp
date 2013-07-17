@@ -10,7 +10,6 @@
 #define NT2_SDK_MEMORY_CONTAINER_REF_HPP_INCLUDED
 
 #include <nt2/sdk/memory/adapted/container_ref.hpp>
-#include <nt2/core/container/table/kind.hpp>
 #include <nt2/core/settings/specific_data.hpp>
 #include <nt2/sdk/memory/forward/container.hpp>
 
