@@ -37,9 +37,10 @@ namespace nt2
       //========================================================================
       // Make the allocator aligned if needed
       //========================================================================
-      typedef typename
-              meta::make_aligned_allocator<typename Alloc::type>::type alloc_t;
+      // typedef typename
+      //         meta::make_aligned_allocator<typename Alloc::type>::type alloc_t;
 
+         typedef typename Alloc::type  alloc_t;
       //========================================================================
       // Make me an buffer sandwich with a proper allocator
       //========================================================================
