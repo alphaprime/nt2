@@ -22,7 +22,6 @@ SET( SOURCES
   divfloor.cpp
   divfix.cpp
   divceil.cpp
-  random.cpp
   logical_xor.cpp
   meanof.cpp
   ifloor.cpp
