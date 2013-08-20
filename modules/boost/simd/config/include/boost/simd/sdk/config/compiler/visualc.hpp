@@ -19,6 +19,7 @@
   #pragma warning( disable : 4244 ) // converting types to double
   #pragma warning( disable : 4804 ) // unsafe use of >
   #pragma warning( disable : 4996 ) // unsafe iostream call
+  #pragma warning( disable : 4714 ) // Temporary forceinline__ shitnitz
 
   #define BOOST_SIMD_COMPILER_MSVC
   #define BOOST_SIMD_COMPILER BOOST_COMPILER
