@@ -15,7 +15,6 @@
 
 NT2_TEST_CASE_TPL ( csch_real__1_0,  NT2_REAL_TYPES)
 {
-
   using nt2::csch;
   using nt2::tag::csch_;
   typedef typename nt2::meta::call<csch_(T)>::type r_t;
@@ -35,7 +34,6 @@ NT2_TEST_CASE_TPL ( csch_real__1_0,  NT2_REAL_TYPES)
 
 NT2_TEST_CASE_TPL ( csch_unsigned_int__1_0,  NT2_UNSIGNED_TYPES)
 {
-
   using nt2::csch;
   using nt2::tag::csch_;
   typedef typename nt2::meta::call<csch_(T)>::type r_t;
@@ -49,7 +47,6 @@ NT2_TEST_CASE_TPL ( csch_unsigned_int__1_0,  NT2_UNSIGNED_TYPES)
 
 NT2_TEST_CASE_TPL ( csch_signed_int__1_0,  NT2_INTEGRAL_SIGNED_TYPES)
 {
-
   using nt2::csch;
   using nt2::tag::csch_;
   typedef typename nt2::meta::call<csch_(T)>::type r_t;

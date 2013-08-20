@@ -36,11 +36,11 @@ NT2_TEST_CASE_TPL ( acoth_real__1_0,  NT2_REAL_TYPES)
 
 NT2_TEST_CASE_TPL ( acoth_unsigned_int__1_0,  NT2_UNSIGNED_TYPES)
 {
-
   using nt2::acoth;
   using nt2::tag::acoth_;
   typedef typename nt2::meta::call<acoth_(T)>::type r_t;
   typedef typename boost::dispatch::meta::as_floating<T>::type wished_r_t;
+
   NT2_TEST_TYPE_IS(r_t, wished_r_t);
 
   // specific values tests
@@ -50,11 +50,11 @@ NT2_TEST_CASE_TPL ( acoth_unsigned_int__1_0,  NT2_UNSIGNED_TYPES)
 
 NT2_TEST_CASE_TPL ( acoth_signed_int__1_0,  NT2_INTEGRAL_SIGNED_TYPES)
 {
-
   using nt2::acoth;
   using nt2::tag::acoth_;
   typedef typename nt2::meta::call<acoth_(T)>::type r_t;
   typedef typename boost::dispatch::meta::as_floating<T>::type wished_r_t;
+
   NT2_TEST_TYPE_IS(r_t, wished_r_t);
 
   // specific values tests
