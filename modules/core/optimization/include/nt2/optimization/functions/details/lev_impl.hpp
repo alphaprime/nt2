@@ -13,6 +13,7 @@
 #include <nt2/include/functions/inbtrue.hpp>
 #include <nt2/include/functions/is_nez.hpp>
 #include <nt2/include/functions/oneplus.hpp>
+#include <nt2/include/functions/rec.hpp>
 #include <nt2/include/functions/linsolve.hpp>
 #include <nt2/include/functions/zeros.hpp>
 #include <nt2/include/constants/ten.hpp>

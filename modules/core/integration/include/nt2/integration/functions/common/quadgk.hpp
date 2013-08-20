@@ -350,7 +350,7 @@ namespace nt2 { namespace ext
     {
       details::quadgk_impl<input_t, value_t> q;
       q.compute(f, x, o, input_is_real_t());
-      result_type that =  {q.result(), q.lasterror(),q.nbeval(),q.ok()};
+      result_type that =  {q.result(), q.lasterror(),q.nbeval(),q.ok(),0u};
       return that;
     }
   };

@@ -156,7 +156,7 @@ namespace nt2 { namespace details
                             , nt2::tag::relative_colon_
                             > select_t;
 
-      return eval(shp,children,s,select_t::type());
+      return eval(shp,children,s,typename select_t::type());
     }
 
     BOOST_FORCEINLINE result_type
