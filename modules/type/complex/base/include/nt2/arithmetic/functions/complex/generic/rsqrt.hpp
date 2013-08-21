@@ -12,14 +12,10 @@
 #include <nt2/include/functions/real.hpp>
 #include <nt2/include/functions/imag.hpp>
 #include <nt2/include/functions/if_else.hpp>
-#include <nt2/include/functions/is_gtz.hpp>
-#include <nt2/include/functions/is_nltz.hpp>
-#include <nt2/include/functions/sign.hpp>
+#include <nt2/include/functions/simd/is_nltz.hpp>
 #include <nt2/include/functions/abs.hpp>
 #include <nt2/include/functions/sqrt.hpp>
-#include <nt2/include/functions/multiplies.hpp>
 #include <nt2/include/functions/rec.hpp>
-#include <nt2/include/constants/sqrt_2o_2.hpp>
 #include <nt2/sdk/complex/meta/as_complex.hpp>
 #include <nt2/sdk/complex/meta/as_real.hpp>
 
@@ -45,7 +41,10 @@ namespace nt2 { namespace ext
     NT2_FUNCTOR_CALL(1)
     {
       const rA0 root = rsqrt(nt2::abs(a0));
-      return if_else(is_nltz(nt2::real(a0)), result_type(root), result_type(Zero<rA0>(), -root));
+      return if_else( is_nltz(nt2::real(a0))
+                    , result_type(root)
+                    , result_type(Zero<rA0>(), -root)
+                    );
     }
   };
 
